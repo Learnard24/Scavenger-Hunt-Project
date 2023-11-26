@@ -1,0 +1,4 @@
+repository "ScavengerHunt@Learnard@cloud"
+  path "/"
+    br "/main"
+    co "/main"
