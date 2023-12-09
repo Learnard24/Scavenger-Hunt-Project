@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
 
-        if (score == 5)
+        if (score == 4)
         {
             winText.SetActive(true);
             Time.timeScale = 0;
