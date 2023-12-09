@@ -25,20 +25,20 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "SCORE: " + score.ToString();
+        scoreText.text = "ITEM: " + score.ToString();
     }
 
     public void AddPoint()
     {
-        score += 50;
-        scoreText.text = "SCORE: " + score.ToString();
+        score += 1;
+        scoreText.text = "ITEM: " + score.ToString();
 
     }
 
     void Update()
     {
 
-        if (score == 100)
+        if (score == 5)
         {
             winText.SetActive(true);
             Time.timeScale = 0;
