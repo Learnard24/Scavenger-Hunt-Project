@@ -18,8 +18,9 @@ public class Timer : MonoBehaviour
         {
             remainingTime = 0;
             timerText.color = Color.red;
+            FindObjectOfType<GameManager>().EndGame();
         }
-        
+
         timerText.text = remainingTime.ToString();
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
