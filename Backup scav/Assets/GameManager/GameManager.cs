@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
           if (gameHasEnded == false)
            {
            gameHasEnded = true;
-            gameoverText.SetActive(true);
-            UnlockMouse();
+           gameoverText.SetActive(true);
+           UnlockMouse();
 
         }
     }

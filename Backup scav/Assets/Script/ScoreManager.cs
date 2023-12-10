@@ -12,15 +12,9 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     public Text scoreText;
-
     public GameObject winText;
-
-    bool gameHasEnded = false;
-
     public GameObject gameoverText;
-
     public float items = 0; 
-
     int score = 0;
 
     public void Awake()
@@ -52,7 +46,7 @@ public class ScoreManager : MonoBehaviour
 
         if (score == items)
         {
-            
+
             winText.SetActive(true);
             UnlockMouse();
         }
