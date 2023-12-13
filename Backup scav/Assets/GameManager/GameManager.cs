@@ -17,10 +17,12 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
           if (gameHasEnded == false)
-           {
-           gameHasEnded = true;
-           gameoverText.SetActive(true);
-           UnlockMouse();
+        {
+            gameHasEnded = true;
+            FindObjectOfType<Playermovementscript>().enabled = false;
+            FindObjectOfType<Mouselook>().enabled = false;
+            gameoverText.SetActive(true);
+            UnlockMouse();
 
         }
     }

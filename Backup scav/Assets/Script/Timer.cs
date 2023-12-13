@@ -13,13 +13,17 @@ public class Timer : MonoBehaviour
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
+            if (remainingTime < 11)
+            {
+                timerText.color = Color.red;
+            }
         }
-        else if (remainingTime < 0)
+        else
         {
             remainingTime = 0;
-            timerText.color = Color.red;
             FindObjectOfType<GameManager>().EndGame();
         }
+
 
         timerText.text = remainingTime.ToString();
         int minutes = Mathf.FloorToInt(remainingTime / 60);

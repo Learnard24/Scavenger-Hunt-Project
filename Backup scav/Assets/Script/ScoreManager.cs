@@ -46,7 +46,8 @@ public class ScoreManager : MonoBehaviour
 
         if (score == items)
         {
-
+            FindObjectOfType<Playermovementscript>().enabled = false;
+            FindObjectOfType<Mouselook>().enabled = false;
             winText.SetActive(true);
             UnlockMouse();
         }
