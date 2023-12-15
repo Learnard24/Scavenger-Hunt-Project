@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
                 timerText.color = Color.red;
             }
         }
-        else
+        else if (remainingTime <0)
         {
             remainingTime = 0;
             FindObjectOfType<GameManager>().EndGame();
